@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HotSpotInCar</string>
+    <string name="action_settings">Settings</string>
+    <string name="OK">Close</string>
+    <string name="intro">\tSelect any BT devices as triggers to enable WiFi Hotspot.\nIf any of selected devices connects to your device the WiFi Hotspot is activated.</string>
+    <string name="noBt">\tNo active Bluetooth device found. Please, turn it on.</string>
+    <string name="tag1">Tag1</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="reflection_error">HotSpotInCar application failed due to undocumented feature error</string>
+    <string name="notify">HotspotInCar active...</string> 
+    <string name="notify.active">Active...</string> 
+    <string name="widget_name">HotSpotInCar widget</string>
+    
+</resources>
