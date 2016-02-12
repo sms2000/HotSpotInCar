@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface OnBtStatusChanged
 {
-	public void onBtListStatusChanged (boolean deviceState, List<BtItem> listItems);
+	public void onBtListStatusChanged 				(boolean deviceState, List<BtItem> listItems);
 }

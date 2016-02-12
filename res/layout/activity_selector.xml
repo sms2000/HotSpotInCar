@@ -33,7 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@+string/OK" 
+        android:text="@+string/OK"
+        android:textSize="16sp"
+        android:minWidth="150dp" 
         android:onClick="onClickOK"/>
 
 </RelativeLayout>

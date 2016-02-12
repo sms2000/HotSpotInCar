@@ -99,7 +99,7 @@ public class WatchdogService extends Service implements OnBtStatusChanged
 	        }           
 	        else if (ACTUATOR_UPDATE_STATUS.equals(action))
 	        {
-	            ActuatorState actuatorState = (ActuatorState)intent.getSerializableExtra (ACTUATOR_STATE);
+	            ActuatorState actuatorState = (ActuatorState)intent.getSerializableExtra(ACTUATOR_STATE);
 
 	            Log.i(TAG, String.format("BroadcastReceiver::onReceive. Received <Update state = %s>.",
 	            		actuatorState.name()));
@@ -112,7 +112,7 @@ public class WatchdogService extends Service implements OnBtStatusChanged
 	
 	private class WorkerThread extends Thread
 	{
-		private  Handler 					workerHandler;
+		private  Handler workerHandler;
 
 		private class FillList implements Runnable
 		{
@@ -304,12 +304,8 @@ public class WatchdogService extends Service implements OnBtStatusChanged
 		public void run()
 		{
 			Looper.prepare();
-
 			workerHandler = new Handler(); 
-			
 			Looper.loop();
-
-			workerHandler = null;
 		}
 		
 		

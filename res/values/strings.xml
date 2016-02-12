@@ -10,8 +10,12 @@
     <string name="connected">Connected</string>
     <string name="disconnected">Disconnected</string>
     <string name="reflection_error">HotSpotInCar application failed due to undocumented feature error</string>
-    <string name="notify">HotspotInCar active...</string> 
-    <string name="notify.active">Active...</string> 
+    <string name="notify">HotspotInCar active&#8230;</string> 
+    <string name="notify.active">Active&#8230;</string> 
     <string name="widget_name">HotSpotInCar widget</string>
     
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+	<string name="request">Request</string>
+	<string name="request_activate_settings">Android 6.0+ requires you to manually activate permissions.\nIf you aggree press \'Yes\' and activate it on the next screen.</string>    
 </resources>
