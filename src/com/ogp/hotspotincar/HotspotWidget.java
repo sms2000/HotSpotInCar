@@ -131,8 +131,8 @@ public class HotspotWidget extends AppWidgetProvider
 		
 		switch(actuatorState)
 		{
-		case NOT_ACTUATED: 	return R.drawable.disconnected;
 		case ACTUATED: 		return R.drawable.connected;
+		case NOT_ACTUATED: 	return R.drawable.disconnected;
 		default: 			return R.drawable.disabled;
 		}
 	}
