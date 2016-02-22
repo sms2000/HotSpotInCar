@@ -640,6 +640,32 @@ public class WatchdogService extends Service implements OnBtStatusChanged
 	}
 	
 	
+	public static void btOnOffStatusChanged(boolean isChecked) 
+	{
+		try
+		{
+			self.btOnOffStatusChangedInternal (isChecked);
+		}
+		catch(Throwable th)
+		{
+			th.printStackTrace();
+		}
+	}
+
+
+	private void btOnOffStatusChangedInternal (boolean isChecked)
+	{
+		if (isChecked)
+		{ 
+			bluetoothAdapter.enable(); 
+		}
+		else
+		{
+			bluetoothAdapter.disable();			
+		}
+	}
+	
+	
 	public static void selectedItemStatusChanged (String address)
 	{
 		try

@@ -9,11 +9,31 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ogp.hotspotincar.SelectorActivity" >
 
+    <TextView android:id="@+id/btOnOffText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    	    android:layout_toStartOf="@+id/btOnOff"
+            android:singleLine="true"
+            android:ellipsize="marquee" 
+            android:text="@+string/btOnOffText"
+            android:layout_marginEnd="10dp" 
+            android:layout_marginTop="10dp" 
+            android:layout_marginBottom="10dp" />
+    
+    
+    <ToggleButton
+        android:id="@+id/btOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+    
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
 	    android:layout_height="match_parent"
         android:orientation="vertical" 
+        android:layout_below="@+id/btOnOff" 
         android:layout_above="@+id/textIntro" 
         android:layout_marginBottom="10dp" />
 

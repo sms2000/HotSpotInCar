@@ -14,22 +14,26 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 
 public class SelectorActivity extends Activity implements SelectedCallbackInterface, OnBtStatusChanged 
 {
 	private static final 	String 			TAG 				= "SelectorActivity";
 
-	private boolean 		attemptedActivation = false; 
-	private ListView		listView 			= null;
-	private TextView		introText			= null;
-	private Handler			handler 			= new Handler();
-	private boolean 		pausing 			= false;
-	private Context			context				= this;
-
-
+	private boolean 			attemptedActivation = false; 
+	private ListView			listView 			= null;
+	private TextView			introText			= null;
+	private Handler				handler 			= new Handler();
+	private boolean 			pausing 			= false;
+	private Context				context				= this;
+	private ToggleButton 		btButton;
+	
+	
 	private class AttachToService implements Runnable
 	{
 		@Override
@@ -79,6 +83,8 @@ public class SelectorActivity extends Activity implements SelectedCallbackInterf
 			listView.setAdapter(customAdapter);
 
 			introText.setText(deviceState ? R.string.intro : R.string.noBt);
+			
+			btOnOffChanged (false, deviceState);
 		}
 	}
 	
@@ -88,6 +94,17 @@ public class SelectorActivity extends Activity implements SelectedCallbackInterf
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selector);
+        
+        btButton = (ToggleButton)findViewById(R.id.btOnOff);
+        btButton.setOnCheckedChangeListener(new OnCheckedChangeListener() 
+        {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) 
+			{
+				btOnOffChanged (true, isChecked);
+			}
+        });
+        
         
         Log.i(TAG, "onCreate. Success >>>>>>");
     }
@@ -245,5 +262,18 @@ public class SelectorActivity extends Activity implements SelectedCallbackInterf
 		});
 
 		dialog.show();
+	}
+	
+	
+	private void btOnOffChanged (boolean manually, boolean isChecked)
+	{
+		if (manually)
+		{
+			WatchdogService.btOnOffStatusChanged (isChecked);
+		}
+		else
+		{
+			btButton.setChecked (isChecked);
+		}
 	}
 }
