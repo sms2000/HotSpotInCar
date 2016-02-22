@@ -1,5 +1,5 @@
 ==========
-THIS CODE IS 'UNRESTRICTED PUBLIC DOMAIN' LICENCED except 3rd party code of 'AndroidProcesses' library with Apache license.
+THIS CODE IS 'UNRESTRICTED PUBLIC DOMAIN' LICENCED
 
 Let me know if you consider your rights violated.
 
