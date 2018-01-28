@@ -20,7 +20,7 @@ and the Multimedia unit may connect and access the Internet.
 ANTIVIRUS REPORTS MALICIOUS SOFTWARE
 ====================================
 
-1. AVG Antivirus for Android reports the GPSToggler can steal your SMS. 
+1. AVG Antivirus for Android reports the HotSpotInCar can steal your SMS. 
    Actually this software has nothing to do with SMS at all (see the sources).
 
 
